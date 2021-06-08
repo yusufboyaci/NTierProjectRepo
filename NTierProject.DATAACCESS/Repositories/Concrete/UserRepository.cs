@@ -12,13 +12,13 @@ namespace NTierProject.DATAACCESS.Repositories.Concrete
         {
             _context = context;
         }
-        public User FindByUserName()
+        public User FindByUserName(string userName)
         {
-
+            return GetByDefault(x => x.UserName == userName);
         }
-        public bool CheckCredential()
+        public bool CheckCredential(string userName,string password)
         {
-
+            return Any(x => x.UserName == userName && x.Password == password);
         }
     }
 }
