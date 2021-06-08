@@ -14,7 +14,7 @@ namespace NTierProject.DATAACCESS.Repositories.Concrete
     public class Repository<T> : IRepository<T> where T : CoreEntity
     {
         private readonly ProjectContext _context;
-        public Repository(ProjectContext context)
+        public Repository(ProjectContext context)//Yorum
         {
             _context = context;
         }
