@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NTierProject.DATAACCESS.Context;
+using NTierProject.DATAACCESS.Repositories.Concrete;
 using NTierProject.WEBUI.Models;
 using System;
 using System.Collections.Generic;
@@ -12,15 +14,20 @@ namespace NTierProject.WEBUI.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        UserRepository _userRepository;
+        CategoryRepository _categoryRepository;
+        ProductRepository _productRepository;
+        public HomeController(ILogger<HomeController> logger, ProjectContext context)
         {
             _logger = logger;
+            _userRepository = new UserRepository(context);
+            _categoryRepository = new CategoryRepository(context);
+            _productRepository = new ProductRepository(context);
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(_categoryRepository.GetActive());
         }
 
         public IActionResult Privacy()
