@@ -25,9 +25,9 @@ namespace NTierProject.CORE.Mapping
 
             builder.Property(x => x.ModifiedComputerName).HasColumnName("Modified Computer Name").IsRequired(false);
             builder.Property(x => x.ModifiedDate).HasColumnName("Modified Date").IsRequired(false);
-            builder.Property(x => x.ModifiedComputerName).HasColumnName("Modified AD Name").IsRequired(false);
-            builder.Property(x => x.ModifiedComputerName).HasColumnName("Modified By").IsRequired(false);
-            builder.Property(x => x.ModifiedComputerName).HasColumnName("Modified IP").IsRequired(false);
+            builder.Property(x => x.ModifiedADUserName).HasColumnName("Modified AD Name").IsRequired(false);
+            builder.Property(x => x.CreatedBy).HasColumnName("Modified By").IsRequired(false);
+            builder.Property(x => x.CreatedIP).HasColumnName("Modified IP").IsRequired(false);
 
 
 
