@@ -24,7 +24,7 @@ namespace NTierProject.WEBUI.Controllers
             _categoryRepository = new CategoryRepository(context);
             _productRepository = new ProductRepository(context);
         }
-
+      
         public IActionResult Index()
         {
             return View(_categoryRepository.GetActive());
