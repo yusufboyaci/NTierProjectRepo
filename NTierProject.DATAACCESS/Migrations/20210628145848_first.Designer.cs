@@ -10,8 +10,8 @@ using NTierProject.DATAACCESS.Context;
 namespace NTierProject.DATAACCESS.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20210609123136_initial")]
-    partial class initial
+    [Migration("20210628145848_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,21 +29,24 @@ namespace NTierProject.DATAACCESS.Migrations
                         .HasColumnName("ID");
 
                     b.Property<string>("CreatedADUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Created AD UserName");
 
                     b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Created By");
 
                     b.Property<string>("CreatedComputerName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Created IP");
+                        .HasColumnName("Created Computer Name");
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("Created Date");
 
                     b.Property<string>("CreatedIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Created IP");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -52,21 +55,24 @@ namespace NTierProject.DATAACCESS.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ModifiedADUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Modified AD User Name");
 
                     b.Property<int?>("ModifiedBy")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Modified By");
 
                     b.Property<string>("ModifiedComputerName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Modified IP");
+                        .HasColumnName("Modified Computer Name");
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("Modified Date");
 
                     b.Property<string>("ModifiedIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Modified IP");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -91,41 +97,47 @@ namespace NTierProject.DATAACCESS.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("CreatedADUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Created AD UserName");
 
                     b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Created By");
 
                     b.Property<string>("CreatedComputerName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Created IP");
+                        .HasColumnName("Created Computer Name");
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("Created Date");
 
                     b.Property<string>("CreatedIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Created IP");
 
                     b.Property<Guid?>("MasterID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ModifiedADUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Modified AD User Name");
 
                     b.Property<int?>("ModifiedBy")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Modified By");
 
                     b.Property<string>("ModifiedComputerName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Modified IP");
+                        .HasColumnName("Modified Computer Name");
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("Modified Date");
 
                     b.Property<string>("ModifiedIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Modified IP");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -148,41 +160,47 @@ namespace NTierProject.DATAACCESS.Migrations
                         .HasColumnName("ID");
 
                     b.Property<string>("CreatedADUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Created AD UserName");
 
                     b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Created By");
 
                     b.Property<string>("CreatedComputerName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Created IP");
+                        .HasColumnName("Created Computer Name");
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("Created Date");
 
                     b.Property<string>("CreatedIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Created IP");
 
                     b.Property<Guid?>("MasterID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ModifiedADUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Modified AD User Name");
 
                     b.Property<int?>("ModifiedBy")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Modified By");
 
                     b.Property<string>("ModifiedComputerName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Modified IP");
+                        .HasColumnName("Modified Computer Name");
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("Modified Date");
 
                     b.Property<string>("ModifiedIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Modified IP");
 
                     b.Property<Guid?>("OrderID")
                         .HasColumnType("uniqueidentifier");
@@ -219,21 +237,24 @@ namespace NTierProject.DATAACCESS.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CreatedADUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Created AD UserName");
 
                     b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Created By");
 
                     b.Property<string>("CreatedComputerName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Created IP");
+                        .HasColumnName("Created Computer Name");
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("Created Date");
 
                     b.Property<string>("CreatedIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Created IP");
 
                     b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
@@ -242,21 +263,24 @@ namespace NTierProject.DATAACCESS.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ModifiedADUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Modified AD User Name");
 
                     b.Property<int?>("ModifiedBy")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Modified By");
 
                     b.Property<string>("ModifiedComputerName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Modified IP");
+                        .HasColumnName("Modified Computer Name");
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("Modified Date");
 
                     b.Property<string>("ModifiedIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Modified IP");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -296,21 +320,24 @@ namespace NTierProject.DATAACCESS.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedADUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Created AD UserName");
 
                     b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Created By");
 
                     b.Property<string>("CreatedComputerName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Created IP");
+                        .HasColumnName("Created Computer Name");
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("Created Date");
 
                     b.Property<string>("CreatedIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Created IP");
 
                     b.Property<string>("Email")
                         .HasMaxLength(100)
@@ -323,21 +350,24 @@ namespace NTierProject.DATAACCESS.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ModifiedADUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Modified AD User Name");
 
                     b.Property<int?>("ModifiedBy")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Modified By");
 
                     b.Property<string>("ModifiedComputerName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Modified IP");
+                        .HasColumnName("Modified Computer Name");
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("Modified Date");
 
                     b.Property<string>("ModifiedIP")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Modified IP");
 
                     b.Property<string>("Name")
                         .HasMaxLength(50)

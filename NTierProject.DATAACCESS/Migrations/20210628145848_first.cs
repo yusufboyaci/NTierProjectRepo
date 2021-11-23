@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NTierProject.DATAACCESS.Migrations
 {
-    public partial class initial : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,15 +17,15 @@ namespace NTierProject.DATAACCESS.Migrations
                     MasterID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
                     CreatedDate = table.Column<DateTime>(name: "Created Date", type: "datetime2", nullable: true),
+                    CreatedComputerName = table.Column<string>(name: "Created Computer Name", type: "nvarchar(max)", nullable: true),
                     CreatedIP = table.Column<string>(name: "Created IP", type: "nvarchar(max)", nullable: true),
-                    CreatedIP0 = table.Column<string>(name: "CreatedIP", type: "nvarchar(max)", nullable: true),
-                    CreatedADUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedBy = table.Column<int>(type: "int", nullable: true),
+                    CreatedADUserName = table.Column<string>(name: "Created AD UserName", type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<int>(name: "Created By", type: "int", nullable: true),
                     ModifiedDate = table.Column<DateTime>(name: "Modified Date", type: "datetime2", nullable: true),
+                    ModifiedComputerName = table.Column<string>(name: "Modified Computer Name", type: "nvarchar(max)", nullable: true),
                     ModifiedIP = table.Column<string>(name: "Modified IP", type: "nvarchar(max)", nullable: true),
-                    ModifiedIP0 = table.Column<string>(name: "ModifiedIP", type: "nvarchar(max)", nullable: true),
-                    ModifiedADUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ModifiedBy = table.Column<int>(type: "int", nullable: true)
+                    ModifiedADUserName = table.Column<string>(name: "Modified AD User Name", type: "nvarchar(max)", nullable: true),
+                    ModifiedBy = table.Column<int>(name: "Modified By", type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -50,15 +50,15 @@ namespace NTierProject.DATAACCESS.Migrations
                     MasterID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
                     CreatedDate = table.Column<DateTime>(name: "Created Date", type: "datetime2", nullable: true),
+                    CreatedComputerName = table.Column<string>(name: "Created Computer Name", type: "nvarchar(max)", nullable: true),
                     CreatedIP = table.Column<string>(name: "Created IP", type: "nvarchar(max)", nullable: true),
-                    CreatedIP0 = table.Column<string>(name: "CreatedIP", type: "nvarchar(max)", nullable: true),
-                    CreatedADUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedBy = table.Column<int>(type: "int", nullable: true),
+                    CreatedADUserName = table.Column<string>(name: "Created AD UserName", type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<int>(name: "Created By", type: "int", nullable: true),
                     ModifiedDate = table.Column<DateTime>(name: "Modified Date", type: "datetime2", nullable: true),
+                    ModifiedComputerName = table.Column<string>(name: "Modified Computer Name", type: "nvarchar(max)", nullable: true),
                     ModifiedIP = table.Column<string>(name: "Modified IP", type: "nvarchar(max)", nullable: true),
-                    ModifiedIP0 = table.Column<string>(name: "ModifiedIP", type: "nvarchar(max)", nullable: true),
-                    ModifiedADUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ModifiedBy = table.Column<int>(type: "int", nullable: true)
+                    ModifiedADUserName = table.Column<string>(name: "Modified AD User Name", type: "nvarchar(max)", nullable: true),
+                    ModifiedBy = table.Column<int>(name: "Modified By", type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -79,15 +79,15 @@ namespace NTierProject.DATAACCESS.Migrations
                     MasterID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
                     CreatedDate = table.Column<DateTime>(name: "Created Date", type: "datetime2", nullable: true),
+                    CreatedComputerName = table.Column<string>(name: "Created Computer Name", type: "nvarchar(max)", nullable: true),
                     CreatedIP = table.Column<string>(name: "Created IP", type: "nvarchar(max)", nullable: true),
-                    CreatedIP0 = table.Column<string>(name: "CreatedIP", type: "nvarchar(max)", nullable: true),
-                    CreatedADUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedBy = table.Column<int>(type: "int", nullable: true),
+                    CreatedADUserName = table.Column<string>(name: "Created AD UserName", type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<int>(name: "Created By", type: "int", nullable: true),
                     ModifiedDate = table.Column<DateTime>(name: "Modified Date", type: "datetime2", nullable: true),
+                    ModifiedComputerName = table.Column<string>(name: "Modified Computer Name", type: "nvarchar(max)", nullable: true),
                     ModifiedIP = table.Column<string>(name: "Modified IP", type: "nvarchar(max)", nullable: true),
-                    ModifiedIP0 = table.Column<string>(name: "ModifiedIP", type: "nvarchar(max)", nullable: true),
-                    ModifiedADUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ModifiedBy = table.Column<int>(type: "int", nullable: true)
+                    ModifiedADUserName = table.Column<string>(name: "Modified AD User Name", type: "nvarchar(max)", nullable: true),
+                    ModifiedBy = table.Column<int>(name: "Modified By", type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -109,15 +109,15 @@ namespace NTierProject.DATAACCESS.Migrations
                     MasterID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
                     CreatedDate = table.Column<DateTime>(name: "Created Date", type: "datetime2", nullable: true),
+                    CreatedComputerName = table.Column<string>(name: "Created Computer Name", type: "nvarchar(max)", nullable: true),
                     CreatedIP = table.Column<string>(name: "Created IP", type: "nvarchar(max)", nullable: true),
-                    CreatedIP0 = table.Column<string>(name: "CreatedIP", type: "nvarchar(max)", nullable: true),
-                    CreatedADUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedBy = table.Column<int>(type: "int", nullable: true),
+                    CreatedADUserName = table.Column<string>(name: "Created AD UserName", type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<int>(name: "Created By", type: "int", nullable: true),
                     ModifiedDate = table.Column<DateTime>(name: "Modified Date", type: "datetime2", nullable: true),
+                    ModifiedComputerName = table.Column<string>(name: "Modified Computer Name", type: "nvarchar(max)", nullable: true),
                     ModifiedIP = table.Column<string>(name: "Modified IP", type: "nvarchar(max)", nullable: true),
-                    ModifiedIP0 = table.Column<string>(name: "ModifiedIP", type: "nvarchar(max)", nullable: true),
-                    ModifiedADUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ModifiedBy = table.Column<int>(type: "int", nullable: true)
+                    ModifiedADUserName = table.Column<string>(name: "Modified AD User Name", type: "nvarchar(max)", nullable: true),
+                    ModifiedBy = table.Column<int>(name: "Modified By", type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -141,15 +141,15 @@ namespace NTierProject.DATAACCESS.Migrations
                     MasterID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
                     CreatedDate = table.Column<DateTime>(name: "Created Date", type: "datetime2", nullable: true),
+                    CreatedComputerName = table.Column<string>(name: "Created Computer Name", type: "nvarchar(max)", nullable: true),
                     CreatedIP = table.Column<string>(name: "Created IP", type: "nvarchar(max)", nullable: true),
-                    CreatedIP0 = table.Column<string>(name: "CreatedIP", type: "nvarchar(max)", nullable: true),
-                    CreatedADUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedBy = table.Column<int>(type: "int", nullable: true),
+                    CreatedADUserName = table.Column<string>(name: "Created AD UserName", type: "nvarchar(max)", nullable: true),
+                    CreatedBy = table.Column<int>(name: "Created By", type: "int", nullable: true),
                     ModifiedDate = table.Column<DateTime>(name: "Modified Date", type: "datetime2", nullable: true),
+                    ModifiedComputerName = table.Column<string>(name: "Modified Computer Name", type: "nvarchar(max)", nullable: true),
                     ModifiedIP = table.Column<string>(name: "Modified IP", type: "nvarchar(max)", nullable: true),
-                    ModifiedIP0 = table.Column<string>(name: "ModifiedIP", type: "nvarchar(max)", nullable: true),
-                    ModifiedADUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ModifiedBy = table.Column<int>(type: "int", nullable: true)
+                    ModifiedADUserName = table.Column<string>(name: "Modified AD User Name", type: "nvarchar(max)", nullable: true),
+                    ModifiedBy = table.Column<int>(name: "Modified By", type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
