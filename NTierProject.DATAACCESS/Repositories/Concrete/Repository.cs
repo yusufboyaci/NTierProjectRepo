@@ -81,8 +81,9 @@ namespace NTierProject.DATAACCESS.Repositories.Concrete
                 {
                     T deleted = GetByID(id);
                     deleted.Status = Status.Deleted;
+                    Update(deleted);
                     ts.Complete();
-                    return Update(deleted);
+                    return true;
                 }
 
             }
